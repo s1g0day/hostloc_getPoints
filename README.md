@@ -4,19 +4,19 @@
 
 github action大规模失效，mjj平均一人10鸡，以下可以部署到自己的小鸡上
 
-**第一步**下载下列代码
+**第一步: **下载下列代码
 https://github.com/Jox2018/hostloc_getPoints/blob/main/hostloc_auto_get_points.py
 
-**第二步**把175，176行代码改为
+**第二步: **把175，176行代码改为
 
 ```
 username = "账户"
 password = "密码"
 ```
 
-**第三步**上面文件上传到小鸡
+**第三步: **上面文件上传到小鸡
 
-**第四步**在小鸡里新建crontab任务
+**第四步: **在小鸡里新建crontab任务
 
 ```
 crontab -e
@@ -61,12 +61,12 @@ HOSTLOC_USERNAME=username1,username2...
 HOSTLOC_PASSWORD=password1,password2...
 
 # 云函数定时获取hostloc积分
-第一步 创建云函数
+**第一步: **创建云函数
 
 ![image-20211222140319531](https://user-images.githubusercontent.com/31206471/147045704-5f39ffa7-e7b1-4a67-bcdb-6ef6da5f8297.png)
 
 
-第二步 下载代码`hostloc_scf_auto_get_points.py`
+**第二步: **下载代码`hostloc_scf_auto_get_points.py`
 
 将代码复制进去后点击完成
 
@@ -77,21 +77,21 @@ HOSTLOC_PASSWORD=password1,password2...
 
 
 
-第二步 把175，176行代码改为
+**第三步: **把175，176行代码改为
 
 ```
 username = "账户"
 password = "密码"
 ```
 
-第三步 设置执行超时时间
+**第四步: **设置执行超时时间
 
 正常情况下脚本需要76秒左右，所以我设置成300秒
 
 ![image-20211222141305458](https://user-images.githubusercontent.com/31206471/147045881-063a8602-dde3-4812-bd0e-f058a58e93a6.png)
 
 
-第四步 云函数安装模块pyaes
+**第五步: **云函数安装模块pyaes
 
 ~~~
 pip3 install pyaes -t ./src
@@ -102,11 +102,10 @@ pip3 install pyaes -t ./src
 
 然后就可以部署测试了
 
+![image-20211222141622853](https://user-images.githubusercontent.com/31206471/147046250-d0867a82-2ef6-4021-8d7c-f95a5e9c9b6e.png)
 
 
-
-
-第五步 创建触发器
+**第六步: **创建触发器
 
 ![image-20211222142400222](https://user-images.githubusercontent.com/31206471/147045539-9381c530-bf32-45d0-bd5b-3ecae4f5a3d0.png)
 
