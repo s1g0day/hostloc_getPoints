@@ -1,11 +1,8 @@
-# hostloc_getPoints
-
-小鸡定时获取hostloc积分
+# 小鸡定时获取hostloc积分
 
 github action大规模失效，mjj平均一人10鸡，以下可以部署到自己的小鸡上
 
-**第一步** 下载下列代码
-https://github.com/Jox2018/hostloc_getPoints/blob/main/hostloc_auto_get_points.py
+**第一步** 下载代码`hostloc_auto_get_points.py`
 
 **第二步** 把175，176行代码改为
 
